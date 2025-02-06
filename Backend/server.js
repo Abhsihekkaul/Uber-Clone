@@ -1,9 +1,12 @@
 const http = require('http');
 const app = require('./app.js')
 const port = process.env.PORT || 3000;
+const connecttoDB = require('./db/db.js')
+
 
 const server = http.createServer(app);
 
-server.listen(port,()=>{
-    console.log(`server is running on port ${port}`)
-});
+
+app.listen(()=>{
+    console.log(`the server is connected to the ${port}  port `);
+})
